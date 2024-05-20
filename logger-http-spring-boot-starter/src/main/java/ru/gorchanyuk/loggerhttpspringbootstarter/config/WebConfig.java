@@ -1,5 +1,6 @@
 package ru.gorchanyuk.loggerhttpspringbootstarter.config;
 
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.ObjectUtils;
@@ -23,7 +24,7 @@ public class WebConfig implements WebMvcConfigurer {
      * @param registry список Interceptor'ов
      */
     @Override
-    public void addInterceptors(InterceptorRegistry registry) {
+    public void addInterceptors(@NonNull InterceptorRegistry registry) {
         if (ObjectUtils.isEmpty(loggingInterceptors)){
             return;
         }
