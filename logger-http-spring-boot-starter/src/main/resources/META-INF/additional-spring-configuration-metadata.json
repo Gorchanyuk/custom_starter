@@ -1,0 +1,149 @@
+{
+  "hints": [
+    {
+      "name": "logger-http.interceptor.enabled",
+      "values": [
+        {
+          "value": true,
+          "description": "Включает работу стартера."
+        },
+        {
+          "value": false,
+          "description": "Отключает работу стартера."
+        }
+      ],
+      "defaultValue": true
+    },
+    {
+      "name": "logger-http.interceptor.pre-handle-enabled",
+      "values": [
+        {
+          "value": true,
+          "description": "Включает логирование входящих http запросов."
+        },
+        {
+          "value": false,
+          "description": "Отключает логирование входящих http запросов."
+        }
+      ],
+      "defaultValue": false
+    },
+    {
+      "name": "logger-http.interceptor.post-handle-enabled",
+      "values": [
+        {
+          "value": true,
+          "description": "Включает логирование исходящих http запросов."
+        },
+        {
+          "value": false,
+          "description": "Отключает логирование исходящих http запросов."
+        }
+      ],
+      "defaultValue": false
+    },
+    {
+      "name": "logger-http.interceptor.after-completion-enabled",
+      "values": [
+        {
+          "value": true,
+          "description": "Включает логирование http запросов завершившихся исключением."
+        },
+        {
+          "value": false,
+          "description": "Отключает логирование http запросов завершившихся исключение."
+        }
+      ],
+      "defaultValue": true
+    },
+    {
+      "name": "logger-http.interceptor.pre-handle-level",
+      "values": [
+        {
+          "value": "error",
+          "description": "Уровень логирования ERROR"
+        },
+        {
+          "value": "warn",
+          "description": "Уровень логирования WARN"
+        },
+        {
+          "value": "info",
+          "description": "Уровень логирования INFO"
+        },
+        {
+          "value": "debug",
+          "description": "Уровень логирования DEBUG"
+        },
+        {
+          "value": "trace",
+          "description": "Уровень логирования TRACE"
+        }
+      ]
+    },
+    {
+      "name": "logger-http.interceptor.post-handle-level",
+      "values": [
+        {
+          "value": "error",
+          "description": "Уровень логирования ERROR"
+        },
+        {
+          "value": "warn",
+          "description": "Уровень логирования WARN"
+        },
+        {
+          "value": "info",
+          "description": "Уровень логирования INFO"
+        },
+        {
+          "value": "debug",
+          "description": "Уровень логирования DEBUG"
+        },
+        {
+          "value": "trace",
+          "description": "Уровень логирования TRACE"
+        }
+      ]
+    },
+    {
+      "name": "logger-http.interceptor.after-completion-level",
+      "values": [
+        {
+          "value": "error",
+          "description": "Уровень логирования ERROR"
+        },
+        {
+          "value": "warn",
+          "description": "Уровень логирования WARN"
+        },
+        {
+          "value": "info",
+          "description": "Уровень логирования INFO"
+        },
+        {
+          "value": "debug",
+          "description": "Уровень логирования DEBUG"
+        },
+        {
+          "value": "trace",
+          "description": "Уровень логирования TRACE"
+        }
+      ]
+    },
+    {
+      "name": "logger-http.interceptor.logging-with-headers",
+      "values": [
+        {
+          "value": true,
+          "description": "Выводить значения Headers в логах"
+        },
+        {
+          "value": false,
+          "description": "Не выводить значения Headers в логах"
+        }
+      ],
+      "defaultValue": false
+    }
+  ]
+}
