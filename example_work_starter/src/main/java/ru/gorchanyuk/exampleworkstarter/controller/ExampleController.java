@@ -20,7 +20,7 @@ public class ExampleController {
     @Operation(summary = "Получение пользователя",
             description = "Пример получение модели пользователя")
     public ResponseEntity<ExampleUserModel> getUser(@Parameter(description = "id пользователя (любое число)")
-                                    @PathVariable("id") long id) {
+                                                    @PathVariable("id") long id) {
         HttpHeaders headers = createHeaders();
         ExampleUserModel model = ExampleUserModel.builder()
                 .firstName("Семен")
@@ -57,7 +57,7 @@ public class ExampleController {
         throw new ExampleException("Выброс пользовательского исключения");
     }
 
-    private HttpHeaders createHeaders(){
+    private HttpHeaders createHeaders() {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);

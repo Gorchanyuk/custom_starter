@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.lang.NonNull;
 import org.springframework.web.servlet.HandlerInterceptor;
 import ru.gorchanyuk.loggerhttpspringbootstarter.props.LoggerHttpProperties;
 import ru.gorchanyuk.loggerhttpspringbootstarter.service.LoggerService;
@@ -22,7 +23,7 @@ public class PreHandleLoggingInterceptor implements HandlerInterceptor {
     private final LoggerHttpProperties properties;
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+    public boolean preHandle(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull Object handler) {
 
         String headers = String.format("Заголовки запроса: \n%s", getHeaders(request));
         String message = String.format("Получен запрос %s: %s. %s",

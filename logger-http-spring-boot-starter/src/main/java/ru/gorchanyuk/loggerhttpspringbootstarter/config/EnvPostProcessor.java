@@ -25,13 +25,14 @@ public class EnvPostProcessor implements EnvironmentPostProcessor {
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
         var resource = new ClassPathResource("default.properties"); // определяем default.properties как локальный ресурс
-        PropertySource<?> propertySource = null;
+        PropertySource<?> propertySource;
         try {
             propertySource = propertySourceLoader.load("logger-http-spring-boot-starter", resource).get(0);
-            // прочитанные настройки проставляются в настройки окружения Spring'а
-            environment.getPropertySources().addLast(propertySource);
         } catch (IOException e) {
-            log.warn("Не удалось загрузить файл .properties для logger-http-spring-boot-starter");
+            log.warn("Не удалось загрузить файл .properties стартера logger-http-spring-boot-starter");
+            return;
         }
+        // прочитанные настройки проставляются в настройки окружения Spring'а
+        environment.getPropertySources().addLast(propertySource);
     }
 }
