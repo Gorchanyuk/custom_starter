@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.gorchanyuk</groupId>
-    <artifactId>example_work_starter</artifactId>
+    <artifactId>example-work-starter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>example_work_starter</name>
-    <description>example_work_starter</description>
+    <name>example-work-starter</name>
+    <description>example-work-starter</description>
     <properties>
         <java.version>17</java.version>
         <springdoc-openapi.version>2.3.0</springdoc-openapi.version>
